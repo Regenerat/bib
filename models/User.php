@@ -15,7 +15,7 @@ use Yii;
  * @property string|null $fio
  * @property int|null $role_id
  *
- * @property Report[] $reports
+ * @property Request[] $Requests
  * @property Role $role
  */
 class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
@@ -63,13 +63,13 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     }
 
     /**
-     * Gets query for [[Reports]].
+     * Gets query for [[Requests]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getReports()
+    public function getRequests()
     {
-        return $this->hasMany(Report::class, ['user_id' => 'id']);
+        return $this->hasMany(Request::class, ['user_id' => 'id']);
     }
 
     /**

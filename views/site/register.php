@@ -6,11 +6,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'password')->passwordInput() ?>
 
+    <?= $form->field($model, 'fio') ?>
+
     <?= $form->field($model, 'email') ?>
 
     <?= $form->field($model, 'phone') ?>
-
-    <?= $form->field($model, 'fio') ?>
+ 
 
     <button>Зарегистрироваться</button>
 

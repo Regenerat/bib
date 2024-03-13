@@ -10,7 +10,7 @@ use Yii;
  * @property int $id
  * @property string|null $status
  *
- * @property Report[] $reports
+ * @property Request[] $Requests
  */
 class Status extends \yii\db\ActiveRecord
 {
@@ -47,12 +47,12 @@ class Status extends \yii\db\ActiveRecord
     }
 
     /**
-     * Gets query for [[Reports]].
+     * Gets query for [[Requests]].
      *
      * @return \yii\db\ActiveQuery
      */
-    public function getReports()
+    public function getRequests()
     {
-        return $this->hasMany(Report::class, ['status_id' => 'id']);
+        return $this->hasMany(Request::class, ['status_id' => 'id']);
     }
 }
